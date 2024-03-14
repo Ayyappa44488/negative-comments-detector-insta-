@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #search-bar {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #comments-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .comment {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .negative-comment {
+            background-color: #ffcccc; /* Light red for negative comments */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Search For Negative Comments</h1>
+    </header>
+
+    <div id="search-container">
+        <form action="/search" method="post">
+            <input type="text" id="search-bar" name="username" placeholder="Enter Username">
+            <input type="submit" value="Search" id="search-bar">
+        </form>
+
+    </div>
+    <div id="comments-container">
+        {%for i in comments%}
+        <div class="comment negative-comment">
+            <p>{{i}}</p>
+        </div>
+        {%endfor%}
+    </div>
+</body>
+<script>
+    
+</html>
