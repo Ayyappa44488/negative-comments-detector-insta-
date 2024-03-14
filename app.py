@@ -4,8 +4,8 @@ import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 import pandas as pd
 nltk.download('vader_lexicon')
-USER="hi_bro445566"
-PASSWORD="Hibro112233"
+USER="your_username"
+PASSWORD="your_password"
 app = Flask(__name__)
 def negative_comments(allcomments):
     sentiments = []
